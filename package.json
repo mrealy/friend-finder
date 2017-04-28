@@ -1,0 +1,26 @@
+{
+  "name": "friend-finder",
+  "version": "1.0.0",
+  "description": "an app for finding friends, when you just can't find them in person...",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrealy/friend-finder.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mrealy/friend-finder/issues"
+  },
+  "homepage": "https://github.com/mrealy/friend-finder#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "fs": "0.0.1-security",
+    "path": "^0.12.7"
+  }
+}

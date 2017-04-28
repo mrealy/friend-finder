@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+ 	<title>FriendFinder | Survey</title>
+
+	<!-- Link to bootstrap -->
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<!-- Link to JQuery -->
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="friends.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+	<div class="container">
+	
+			<div class="row">
+
+					<div class="jumbotron">
+						<h1>Enter your info, then find a match</h1>
+					</div>
+
+					<h1><strong> About you </strong></h1>
+
+					<form method="POST" action="http://localhost:8080/api/friends">
+							<div class="form-group">
+									<label for="name">Name (required)</label>
+									<input type="text" class="form-control" name="name" required>
+							</div>
+
+							<div class="form-group">
+									<label for="pic">Link to Photo Image (required)</label>
+									<input type="text" class="form-control" name="pic" required>
+							</div>
+
+							<div class="form-group">
+									<label for="q1">You would rather hang out in smaller groups than larger groups.</label>
+									<select class="form-control" name="q1">
+											<option>1 strongly agree</option>
+											<option>2</option>
+											<option>3</option>
+											<option>4</option>
+											<option>5 strongly disagree</option>
+									</select>
+							</div>
+
+							<div class="form-group">
+									<label for="q2">You answer your phone...</label>
+									<select class="form-control" name="q2">
+											<option>1 Right Away</option>
+											<option>2 In a few minutes</option>
+											<option>3 Within the hour</option>
+											<option>4 Within a day</option>
+											<option>5 When you need something</option>
+									</select>
+							</div>
+
+							<div class="form-group">
+								<label for="q3">You use emojis while texting</label>
+									<select class="form-control" name="q3">
+											<option>1 Every message</option>
+											<option>2</option>
+											<option>3</option>
+											<option>4</option>
+											<option>5 Never</option>
+									</select>
+							</div>
+
+							<div class="form-group">
+									<label for="q4">You like to talk about politics with friends</label>
+									<select class="form-control" name="q4">
+											<option>1 All the time</option>
+											<option>2</option>
+											<option>3</option>
+											<option>4</option>
+											<option>5 No politics!</option>
+									</select>
+							</div>
+
+							<div class="form-group">
+									<label for="q5">You enjoy philosohpical or intellectual conversations</label>
+									<select class="form-control" name="q5">
+											<option>1 I'm a true philosopher</option>
+											<option>2</option>
+											<option>3 </option>
+											<option>4</option>
+											<option>5 Thinking hurts, let's keep it simple</option>
+									</select>
+							</div>
+
+							<div class="form-group">
+									<label for="q6">You enjoy watching or talking about sports</label>
+									<select class="form-control" name="q6">
+											<option>1 Let's go sports talk, let's go -clap clap clap-</option>
+											<option>2</option>
+											<option>3 </option>
+											<option>4</option>
+											<option>5 Can we go back to philosophy? Or anything else?</option>
+									</select>
+							</div>
+
+							<button type=“submit” class=“btn btn-default”>Submit</button>
+
+					</form>
+
+			</div>
+	</div>
+
+<!-- modal -->
+	<div id="match-modal" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+					<!-- Modal content-->
+					<div class="modal-content">
+							<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal">&times;</button>
+									<h4 class="modal-title">Your Matches:</h4>
+							</div>
+							<div class="modal-body">
+									<p>Some text in the modal.</p>
+							</div>
+							<div class="modal-footer">
+									<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+							</div>
+					</div>
+			</div>
+	</div>
+        <!-- /.modal -->
+
+
+</body>
+</html>
